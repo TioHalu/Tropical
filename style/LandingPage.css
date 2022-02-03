@@ -122,3 +122,21 @@ i {
     font-family: "Sedgwick Ave Display";
     font-size: xx-large;
 }
+
+#submit {
+    background-color: #F2F6EA;
+    margin-bottom: 20px;
+    font-family: "Nunito";
+    color: black;
+    border-bottom: 4px solid dimgray;
+}
+
+#submit:hover {
+    border: 4px solid dimgray;
+}
+
+footer {
+
+    padding: 10px;
+    background-color: #8AAB28;
+}
