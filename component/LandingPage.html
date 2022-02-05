@@ -26,12 +26,12 @@
         <a class="navbar-brand" href="#">
         <img src="../assets/Label.png" width="170" height="170"  class="img-fluid" alt="...">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" id="toggle" type="button"  data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" onclick="myfunction()">
+            <span class="bi-card-text" id="toggle"></span>
         </button>
         <div class="collapse navbar-collapse flex-row-reverse" id="navbarNavDropdown">
-            <ul class="navbar-nav ">
+            <ul class="navbar-nav text-center" id="ul">
                 <li class="nav-item">
                     <a class="nav-link" id="list" aria-current="page" href="#about">About</a>
                 </li>
@@ -56,6 +56,9 @@
 </nav>
 <!-- js navbar -->
 <script>
+    function myfunction() {
+        document.getElementById("navbar").style.backgroundColor="#8AAB28"; 
+    }
     const nav = document.querySelector('nav');
 
         window.addEventListener('scroll', () => {
@@ -65,6 +68,7 @@
                 nav.classList.remove('active_nav');
             }
     })
+
 </script>
 <!-- carousel -->
 
@@ -79,10 +83,10 @@
         <div class="carousel-item active" data-bs-interval="10000">
             <img src="../assets/Landing.png" class="img-fluid" alt="...">
             <div class="carousel-caption" >
-                <h2 id="baner">Supplying across the globe</h2>
-                <h1 id="baner">The Leading Supplier <br>
+                <h2 id="baner1">Supplying across the globe</h2>
+                <h1 id="baner2">The Leading Supplier <br>
                 of Tropical Fruits</h1>
-                <button type="button" class="btn btn-secondary mt-5" id="btnlearn">Learn More</button>
+                <button type="button" class="btn btn-secondary" id="btnlearn">Learn More</button>
             </div>
         </div>
         <!-- <div class="carousel-item" data-bs-interval="2000">
@@ -197,25 +201,25 @@
                 <div class="row">
                     <div class="col-1"></div>
                     <div class="col-5">
-                        <div class="container">
+                        <div class="container center">
                             <div class="row text-center">
                                 <h3>Mango Harumanis</h3>
                             </div>
-                            <div class="row" align="justify">
+                            <div class="row " align="justify">
                                 <p>Harumanis is one of the most popular mango varieties produced in Indonesia. Compared to other well-known mango varieties
                                 such as the Alphonso variety, Harumanis is slightly larger and more elongated and the color remains green even when the
                                 fruit fully ripens. The Harumanis variety is known for its taste and juiciness.</p>
                             </div>
-                            <div class="row text-center mt-5">
+                            <div class="row text-center" id="rowbtn">
                                 <div class="col-6">
-                                    <a href="">
-                                        <img src="../assets/details.png" alt="" class="img-fluid" id="btnproduct">
-                                    </a>
+                                <button type="" id="btnproduct"><span id="hide">See</span>
+                                    Details
+                                </button>
                                 </div>
                                 <div class="col-6">
-                                    <a href="">
-                                        <img src="../assets/contact.png" alt="" class="img-fluid" id="btnproduct">
-                                    </a>
+                                <button type="" id="btnproduct">
+                                    Contact <i id="whatsapp" class="bi bi-whatsapp"></i>
+                                </button>
                                 </div>
                             </div>
                         </div>
@@ -236,16 +240,16 @@
                             <div class="row" align="justify">
                                 <p>Harumanis is one of the most popular mango varieties produced in Indonesia. Compared to other well-known mango varieties such as the Alphonso variety, Harumanis is slightly larger and more elongated and the color remains green even when the fruit fully ripens. The Harumanis variety is known for its taste and juiciness.</p>
                             </div>
-                            <div class="row text-center mt-5">
+                            <div class="row text-center" id="rowbtn">
                                 <div class="col-6">
-                                    <a href="">
-                                        <img src="../assets/details.png" alt="" class="img-fluid" id="btnproduct">
-                                    </a>
+                                    <button type="" id="btnproduct"><span id="hide">See</span>
+                                        Details 
+                                    </button>
                                 </div>
                                 <div class="col-6">
-                                    <a href="">
-                                        <img src="../assets/contact.png" alt="" class="img-fluid" id="btnproduct">
-                                    </a>
+                                <button type="" id="btnproduct">
+                                    Contact <i id="whatsapp" class="bi bi-whatsapp"></i>
+                                </button>
                                 </div>
                             </div>
                         </div>
@@ -338,7 +342,7 @@
                     <form action="" method="post">
                         <input class="form-control" type="text" placeholder="Enter your Name">
                         <input class="form-control mt-3" type="text" placeholder="Enter a valid email adress">
-                        <textarea class="form-control mt-3" placeholder="Enter your message" id="floatingTextarea2" rows="8"></textarea>
+                        <textarea class="form-control mt-3" placeholder="Enter your message" id="floatingTextarea2"></textarea>
                         <button type="submit" class="btn mt-3" id="submit">submit</button>
                     </form>
                 </div>
@@ -351,7 +355,7 @@
 <!-- footer -->
 <footer>
 <div class="footer">
-    <span>@2021 Tropical Fruits Indonesia. All rights reserved</span>
+    <span id="footer">@2021 Tropical Fruits Indonesia. All rights reserved</span>
 </div>
 </footer>
 
