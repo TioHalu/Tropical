@@ -4,6 +4,11 @@
     transition: top 0.3s;
 }
 
+#logo {
+    height: 50px;
+    width: 170px;
+}
+
 .active_nav {
     opacity: 0.0;
     box-shadow: 0 0 .5rem rgba(0, 0, 0, .6);
@@ -26,7 +31,6 @@
 
 #toggle {
     color: white;
-
 }
 
 
@@ -174,6 +178,11 @@ textarea {
 /* responsive  */
 
 @media (max-width: 991.98px) {
+
+    #toggle {
+        font-size: xx-large;
+    }
+
     #list {
         font-size: large;
     }
@@ -217,9 +226,11 @@ textarea {
     #whatsapp {
         display: none;
     }
-    #hide{
+
+    #hide {
         display: none;
     }
+
     #rowbtn {
         margin-top: 3vh;
     }
@@ -264,6 +275,13 @@ textarea {
 
 
 @media (max-width: 767.98px) {
+    #logo{
+        height: 40px;
+    }
+    #toggle {
+        font-size: large;
+    }
+
     #list {
         font-size: small;
     }
@@ -351,6 +369,14 @@ textarea {
 
 
 @media (max-width: 575.98px) {
+    #logo{
+        height: 30px;
+        width: 160px;
+    }
+    #toggle {
+        font-size:x-small;
+    }
+
     #list {
         font-size: x-small;
     }
